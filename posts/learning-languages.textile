@@ -1,0 +1,16 @@
+h1. Why learn languages?
+
+* Say something about pragprog and Giles Bowkett
+
+* Say something about natural languages
+
+Recently I've been learning Haskell and Scala.
+
+I'd been meaning to look at Haskell for a while, but been put off by the impression that you needed to be an expert in abstract algebra to even begin learning it.  One day I just tried it (*TODO* mention RWH, LYAH), and found it's actually pretty easy to get into, if you're willing to accept a little bit of magic (i.e. defer full understanding) with respect to how it handles I/O.  It's *very* expressive, in ways that are mind-expanding, and its type inference actually helps you write programs rather than just providing (arguable) safety guarantees.
+
+* Notes about pragmatism (compiles to native code, can call into C)
+* Examples of expressiveness (e.g. composition, {{{lift}}}) and abstraction
+
+* Scala blah
+
+* Link to http://morethanseven.net/2009/06/10/how-decide-your-next-programming-language/
