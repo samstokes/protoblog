@@ -1,16 +1,90 @@
-h1. Why learn languages?
+h1. Why learn programming languages?
 
-* Say something about pragprog and Giles Bowkett
+<!--
+vim:tw=80
+-->
 
-* Say something about natural languages
+This is the inaugural post in a blog where I plan to write down my thoughts,
+experiences and wild conjectures on software development.  Being an unrepentant
+language geek, I'm likely to post occasionally (but not exclusively) about
+programming languages; so I thought a fitting way to begin would be to discuss
+why I think learning new programming languages is important.
+
+The most well-known proponents of learning new languages are the Pragmatic
+Programmers, who advise learning at least one per year.  They don't go into much
+detail, as it's just one special case of their more general advice never to stop
+learning.  Some disagree, arguing that it's a
+[[waste of time|http://duartes.org/gustavo/blog/post/language-dabbling-considered-wasteful]].
+I think they're right in pointing out that practice in a language you already
+know is more important, and I love Giles Bowkett's idea of
+[[writing a new app every month|http://gilesbowkett.blogspot.com/2008/12/no-new-language-in-2009-new-habits.html]],
+but I think there are real benefits to learning other languages that make it
+worthwhile.  The benefits I want to talk about are to do with ''expressiveness''
+and ''idiom''.
+
+* TODO give a high-level example
+
+Ruby blocks are a way of passing around anonymous pieces of code.  Big deal.
+Most languages have some way to pass functions as arguments - even C has
+function pointers - and many also have syntax for anonymous functions.  Ruby
+makes an annoying distinction (TODO LINK THIS) between blocks - code you pass to
+a function - and procs - code that you can assign to a variable - and the
+scoping rules are sometimes surprising (TODO LINK THIS and give an example) TODO
+THIS IS UNFINISHED
+
+Except that in Ruby the syntax for passing a block to a function looks very
+similar to the syntax for the built-in control structures:
+
+{{{
+if predicate
+  do_stuff
+end
+}}}
+
+{{{
+function_that_takes_a_block do |arg1, arg2|
+  do_stuff_with(arg1, arg2)
+end
+}}}
+
+This means that in Ruby you can write your own control structures which feel as
+natural to use as those built in to the language.  More interestingly, in Ruby
+this is a ''normal'' thing to do.
+
+* TODO find some good examples of this
+** maybe example: with_stuff do; end
+
+** mention block/proc inconsistency (link to Raganwald)
+** scoping issues (?)
+
+* learn lots of languages -> easy to pick up new one
+
+* Lisp macros -> eliminate syntactic repetition -> design patterns
+** (link to CLL post?)
+
+* Haskell 'liftM', 'liftA1', etc
+** let (<+>) = liftA2 (+) :: Num a => Maybe a -> Maybe a -> Maybe a
+** Just 3 <+> Nothing -- -> Nothing
+** C# variant
+** Scala Lift?
+
+* Link to http://morethanseven.net/2009/06/10/how-decide-your-next-programming-language/
+
+* talk about natural languages too
+
+------------- Haskell / Scala blah probably for another post ---------
 
 Recently I've been learning Haskell and Scala.
 
-I'd been meaning to look at Haskell for a while, but been put off by the impression that you needed to be an expert in abstract algebra to even begin learning it.  One day I just tried it (*TODO* mention RWH, LYAH), and found it's actually pretty easy to get into, if you're willing to accept a little bit of magic (i.e. defer full understanding) with respect to how it handles I/O.  It's *very* expressive, in ways that are mind-expanding, and its type inference actually helps you write programs rather than just providing (arguable) safety guarantees.
+I'd been meaning to look at Haskell for a while, but been put off by the
+impression that you needed to be an expert in abstract algebra to even begin
+learning it.  One day I just tried it, and found it's actually pretty easy to
+get into, if you're willing to accept a little bit of magic (i.e. defer full
+understanding) with respect to how it handles I/O.  It's *very* expressive, in
+ways that are mind-expanding, and its type inference actually helps you write
+programs rather than just providing (arguable) safety guarantees.
 
 * Notes about pragmatism (compiles to native code, can call into C)
 * Examples of expressiveness (e.g. composition, {{{lift}}}) and abstraction
 
 * Scala blah
-
-* Link to http://morethanseven.net/2009/06/10/how-decide-your-next-programming-language/
